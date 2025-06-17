@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeanCarlosRamosOliveira
 {
-    public class CadVeiculos
+    internal class MenuOpcoes
     {
-        Veiculo[] veiculos {  get; set; }
     }
 }

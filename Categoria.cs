@@ -8,15 +8,23 @@ namespace GeanCarlosRamosOliveira
 {
     public class Categoria
     {
-        public string Nome { get; private set; }
-        public string Descricao { get; private set; }
-
+        private string _nome;
+        public string Nome
+        {
+            get { return _nome; }
+            set { _nome = value; }
+        }
+        private string _descricao;
+        public string Descricao
+        {
+            get { return _descricao; }
+            set { _descricao = value; }
+        }
         public Categoria(string nome, string descricao)
         {
             Nome = nome;
             Descricao = descricao;
         }
-
         public override string ToString()
         {
             return $"Nome:{Nome}{Descricao}";

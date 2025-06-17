@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GeanCarlosRamosOliveira
 {
-    public class CadVeiculos
+    public class CadCategorias
     {
-        Veiculo[] veiculos {  get; set; }
+        Categoria[] categorias { get; set; }
     }
 }

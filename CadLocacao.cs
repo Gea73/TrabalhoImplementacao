@@ -8,5 +8,6 @@ namespace GeanCarlosRamosOliveira
 {
     public class CadLocacao
     {
+        Locacao[] locacoes {  get; set; }
     }
 }

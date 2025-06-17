@@ -43,11 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadCategorias.cs" />
     <Compile Include="CadLocacao.cs" />
     <Compile Include="CadVeiculos.cs" />
+    <Compile Include="Caminhao.cs" />
     <Compile Include="Carro.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="EntradaDados.cs" />
+    <Compile Include="GravaArquivoCSV.cs" />
+    <Compile Include="LeArquivoCSV.cs" />
     <Compile Include="Locacao.cs" />
+    <Compile Include="MenuOpcoes.cs" />
     <Compile Include="Moto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

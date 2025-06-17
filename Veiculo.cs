@@ -14,35 +14,46 @@ namespace GeanCarlosRamosOliveira
             get { return _placa; }
             set { _placa = value; }
         }
-
         private string _marca;
-
         public string Marca
         {
             get { return _marca; }
-            private set{_marca = value;}
+            set { _marca = value; }
         }
-
         private string _modelo;
         public string Modelo
         {
             get { return _modelo; }
-            private set { _modelo = value; }
-
+            set { _modelo = value; }
         }
-        public double ValorLocacao { get;private set; }
-        public Categoria Categoria { get;private set; }
-        public bool Disponivel { get; set; }
-
+        private double _valorLocacao;
+        public double ValorLocacao
+        {
+            get { return _valorLocacao; }
+            set { _valorLocacao = value; }
+        }
+        private Categoria _categoria;
+        public Categoria Categoria
+        {
+            get { return _categoria; }
+            set { _categoria = value; }
+        }
+        private bool _disponivel;
+        public bool Disponivel
+        {
+            get { return _disponivel; }
+            set { _disponivel = value; }
+        }
         public Veiculo(string placa, string marca, string modelo, double valorLocacao, Categoria categoria)
         {
-            Placa = placa;
-            Marca = marca;
-            Modelo = modelo;
-            ValorLocacao = valorLocacao;
-            Categoria = categoria;
-            Disponivel = true;
+            _placa = placa;
+            _marca = marca;
+            _modelo = modelo;
+            _valorLocacao = valorLocacao;
+            _categoria = categoria;
+            _disponivel = true;
         }
+   
 
         public abstract void ExibirDetalhes();
     }
