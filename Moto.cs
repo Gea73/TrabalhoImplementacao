@@ -16,12 +16,35 @@ namespace GeanCarlosRamosOliveira
         }
         public Moto(string placa, string marca, string modelo, double valorLocacao, Categoria categoria, int cilindrada) : base(placa, marca, modelo, valorLocacao, categoria)
         {
-           _cilindrada = cilindrada;
+            _cilindrada = cilindrada;
         }
 
         public override void ExibirDetalhes()
         {
-            Console.WriteLine($"Moto:{Marca} {Modelo}, {Cilindrada} cilindradas, Placa: {Placa}, Categoria: {Categoria.Nome}, Diária: R${ValorLocacao:F2}, Disponível: {Disponivel}");
+            string disponivel;
+            if (Disponivel)
+            {
+                disponivel = "Disponivel";
+            }
+            else
+            {
+                disponivel = "Não Disponivel";
+            }
+            Console.WriteLine($"Moto:{Marca} {Modelo}, {Cilindrada} cilindradas, Placa:{Placa}, Categoria:{Categoria.Nome}, Diária:R${ValorLocacao:F2}, Disponível:{disponivel}");
+        }
+
+        public override string ToString()
+        {
+            string disponivel;
+            if (Disponivel)
+            {
+                disponivel = "Disponivel";
+            }
+            else
+            {
+                disponivel = "Não Disponivel";
+            }
+            return $"Moto:{Marca} {Modelo}, {Cilindrada} cilindradas, Placa:{Placa}, Categoria:{Categoria.Nome}, Diária:R${ValorLocacao:F2}, Disponível:{disponivel}";
         }
     }
 

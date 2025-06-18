@@ -27,7 +27,7 @@ namespace GeanCarlosRamosOliveira
         }
         public override string ToString()
         {
-            return $"Nome:{Nome}{Descricao}";
+            return $"Nome:{Nome} Descrição:{Descricao}";
 
         }
 

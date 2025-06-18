@@ -28,6 +28,28 @@ public class Carro : Veiculo
 
     public override void ExibirDetalhes()
     {
-        Console.WriteLine($"Carro: {Marca} {Modelo}, {NumPortas} Portas, Ar-Condicionado: {ArCondicionado}, Placa: {Placa}, Categoria: {Categoria.Nome}, Diária: R${ValorLocacao:F2}, Disponível: {Disponivel}");
+        string disponivel;
+        if (Disponivel)
+        {
+            disponivel = "Disponivel";
+        }
+        else
+        {
+            disponivel = "Não Disponivel";
+        }
+        Console.WriteLine($"Carro: {Marca} {Modelo}, {NumPortas} Portas, Ar-Condicionado: {ArCondicionado}, Placa: {Placa}, Categoria: {Categoria.Nome}, Diária: R${ValorLocacao:F2}, {disponivel}");
+    }
+    public override string ToString()
+    {
+        string disponivel;
+        if (Disponivel)
+        {
+            disponivel = "Disponivel";
+        }
+        else
+        {
+            disponivel = "Não Disponivel";
+        }
+        return $"Carro: {Marca} {Modelo}, {NumPortas} Portas, Ar-Condicionado: {ArCondicionado}, Placa: {Placa}, Categoria: {Categoria.Nome}, Diária: R${ValorLocacao:F2}, {disponivel}";
     }
 }

@@ -23,8 +23,32 @@ namespace GeanCarlosRamosOliveira
 
         public override void ExibirDetalhes()
         {
-            Console.WriteLine($"Caminhão: {Marca} {Modelo}, {CapacidadeCargaToneladas} Toneladas, Placa: {Placa}, Categoria: {Categoria.Nome}, Diária: R${ValorLocacao:F2}, Disponível: {Disponivel}");
+            string disponivel;
+            if (Disponivel)
+            {
+                disponivel = "Disponivel";
+            }
+            else
+            {
+                disponivel = "Não Disponivel";
+            }
+            Console.WriteLine($"Caminhão: {Marca} {Modelo}, {CapacidadeCargaToneladas} Toneladas, Placa: {Placa}, Categoria: {Categoria.Nome}, Diária: R${ValorLocacao:F2}, {disponivel}");
         }
+
+        public override string ToString()
+        {
+            string disponivel;
+            if (Disponivel)
+            {
+                disponivel = "Disponivel";
+            }
+            else
+            {
+                disponivel = "Não Disponivel";
+            }
+            return $"Caminhão: {Marca} {Modelo}, {CapacidadeCargaToneladas} Toneladas, Placa: {Placa}, Categoria: {Categoria.Nome}, Diária: R${ValorLocacao:F2}, {disponivel}";
+        }
+
     }
 
     

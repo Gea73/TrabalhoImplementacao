@@ -42,5 +42,19 @@ namespace GeanCarlosRamosOliveira
             get { return _valor; }
             set { _valor = value; }
         }
+
+        public Locacao(int identificacao, Veiculo veiculo, DateTime dataInicial, DateTime dataFinal, double valor)
+        {
+            _identificacao = identificacao;
+            _veiculo = veiculo;
+            _dataInicial = dataInicial;
+            _dataFinal = dataFinal;
+            _valor = valor;
+        }
+
+        public override string ToString()
+        {
+            return $"Indetificação:{Identificacao} Veiculo:{Veiculo} Data Inicial:{DataInicial} Data Final:{DataFinal} Valor{Valor}";
+        }
     }
 }
